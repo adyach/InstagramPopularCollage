@@ -1,7 +1,7 @@
 # InstagramPopularCollage
 Instagrem popular photos collage
 
-Libraries:
+Libraries: <br/>
 support-v4 22.0.+
 appcompat-v7 22.1.0
 gson 2.3.1
