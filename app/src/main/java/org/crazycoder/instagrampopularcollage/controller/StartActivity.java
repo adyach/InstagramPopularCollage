@@ -42,8 +42,6 @@ public class StartActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start);
         ButterKnife.inject(this);
-        nickName.setText("m_galustyan");
-
         FragmentManager fm = getSupportFragmentManager();
         searchRequestFragment = (SearchRequestFragment) fm.findFragmentByTag(TAG_CONTAINER);
         if (searchRequestFragment == null) {
