@@ -2,33 +2,21 @@ package org.crazycoder.instagrampopularcollage.model;
 
 import android.graphics.Bitmap;
 import android.os.Parcel;
-import android.os.Parcelable;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Photo
- *
+ * <p/>
  * Created by Andrey Dyachkov on 31/05/15.
  */
-public class Photo implements Parcelable {
-
-    public static final Parcelable.Creator<Photo> CREATOR = new Creator<Photo>() {
-
-        @Override
-        public Photo[] newArray(int size) {
-
-            return new Photo[size];
-        }
-
-        @Override
-        public Photo createFromParcel(Parcel source) {
-
-            return new Photo(source);
-        }
-    };
+public class Photo {
 
     private String url;
     private Bitmap bitmap;
     private boolean selected;
+    private static List<Photo> photos = new ArrayList<>();
 
     public Photo(String url) {
         this.url = url;
@@ -59,14 +47,11 @@ public class Photo implements Parcelable {
         this.selected = selected;
     }
 
-    @Override
-    public int describeContents() {
-        return 0;
+    public static void setPhotos(List<Photo> photos) {
+        Photo.photos = photos;
     }
 
-    @Override
-    public void writeToParcel(Parcel dest, int flags) {
-        dest.writeString(url);
-        dest.writeParcelable(bitmap, 0);
+    public static List<Photo> getPhotos() {
+        return photos;
     }
 }

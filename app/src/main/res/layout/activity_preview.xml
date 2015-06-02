@@ -10,7 +10,21 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:gravity="center"
-        android:textSize="@dimen/sp_20"
-        android:text="@string/send" />
+        android:text="@string/send"
+        android:textSize="@dimen/sp_20" />
+
+    <LinearLayout
+        android:id="@+id/preview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/send"
+        android:orientation="vertical" />
+
+    <ProgressBar
+        android:id="@+id/progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true" />
 
 </RelativeLayout>

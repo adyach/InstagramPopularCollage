@@ -7,6 +7,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.GridView;
+import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 
 import org.crazycoder.instagrampopularcollage.Constants;
@@ -76,8 +77,8 @@ public class PhotosActivity
                     setMessage(R.string.no_photos_selected).show();
             return;
         }
+        Photo.setPhotos(selectedPhotos);
         Intent intent = new Intent(this, PreviewActivity.class);
-        intent.putParcelableArrayListExtra(Constants.MODEL, selectedPhotos);
         startActivity(intent);
     }
 

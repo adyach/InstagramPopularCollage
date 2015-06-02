@@ -11,4 +11,7 @@ public class Constants {
     public static final String CLIENT_ID = "aa688ba40fc2490c9144682aee4379b1";
     public static final String MODEL = "MODEL";
     public static final String NICKNAME = "NICKNAME";
+    public static final String CACHE_DIR = "collage";
+    public static final String COLLAGE_NAME = "my collage.png";
+    public static final String BITMAP = "BITMAP";
 }
